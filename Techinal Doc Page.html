@@ -1,0 +1,254 @@
+<!doctype html/>
+<html>
+    <head>
+        <meta name="description" content=" Official Python Technical Documentation Page"/>
+        <meta name="viewpoint" content="width=device-width, initial-scale=1.0"/>
+        <meta charset="utf-8"/>
+        <title>Python Tech Docs</title>
+        <link rel="stylesheet" href="technical doc page.css"/>
+    </head>
+    <body>
+        <main id="main-doc">
+            <section class="main-section" id="Introduction">
+              <header>Introduction</header>
+              <p>Python is a versatile, high-level, interpreted programming language designed for readability and simplicity
+                 (for example, its syntax is clean and expressive). Python is widely used in various domains, such as web development,
+                 data science, automation, and machine learning.
+                 Python emphasizes code readability with its use of indentation to define code blocks, and it provides a rich standard
+                 library with modules like os, datetime, and math, as well as a core set of built-in types such as lists, dictionaries, 
+                 and sets. Python can be extended with third-party libraries for specialized purposes by supplementing it with additional packages; for example:
+                <ul>
+                  <li>Popular libraries like <span>numpy</span> and <span>pandas</span> extend Python for numerical and data analysis tasks, providing examples of data manipulation and computation.</li>
+                  <li>Frameworks like <span>django</span> and <span>flask</span> allow Python to power web applications, handling HTTP requests and responses such as routing, form processing, and database interactions.</li>
+                </ul>
+              </p>
+            </section>  
+            <section class="main-section" id="What You Should Already Know">
+              <header>What You Should Already Know</header>
+              <p>This guide assumes you have the following basic background:</p>
+              <ul>
+                <li>A general understanding of computers and programming concepts.</li>
+                <li> Good working knowledge of basic text editing and file management (e.g., creating, saving, and organizing files).</li>
+                <li>Some programming experience. If you are new to programming, try one of the tutorials linked on the main page about Python.</li>
+              </ul>
+            </section>
+            <section class="main-section" id="Python_and_Java">
+              <header>Python and java</header>
+              <p>Python and Java are similar in some ways but fundamentally different in others. Python and Java both support object-oriented programming, but Python does not have Java's strict static typing and compilation requirements.
+                 Python's dynamic typing and interpreted nature make it more flexible, which is why it was originally named after the Monty Python comedy group rather than a more technical term.
+                 In contrast to Java's complex type system and class-based structure, Python supports a runtime system based on a smaller number of data types, representing numeric, Boolean, and string values.
+                 Python has a more straightforward object model instead of the more common class-based model. The Python object model provides dynamic typing; that is, variables can hold values of any type. 
+                 JavaScript also supports functions without any special declarative requirements. Python treats functions as first-class objects, executing them as callable objects.
+                 Python is a free-form language compared to Java. Python does not use curly braces to define blocks of code; instead, it uses indentation to indicate blocks.
+                 You do not have to declare the types of variables, parameters, function return types, or object attributes. Variables are dynamically typed in Python.</p>
+            </section>
+            <section class="main-section" id="Hello_World">
+              <header>Hello World</header>
+              <p>To get started with writing Python, open a text editor and write your first "Hello world" Python code:</p>
+              <pre>
+                <code>
+                  def greet_me(your_name):
+                      print("Hello " + your_name)
+                  greet_me("World") 
+                </code>
+              </pre>
+              <p>Save the code in a file (e.g., hello.py) and run it using python hello.py to watch it unfold in your terminal!</p>
+            </section>
+            <section class="main-section" id="Variables">
+              <header>Variables</header>
+              <p>You use variables as symbolic names for values in your application. The names of variables, called identifiers, conform to certain rules.
+                A Python identifier must start with a letter (a-z, A-Z) or underscore (_), followed by letters, digits (0-9), or underscores.
+                Python is case-sensitive, so myVar and myvar are different variables. Special characters like @, $, and % are not allowed in identifiers.
+                You can use ISO 8859-1 or Unicode letters such as å and ü in identifiers. For example, you can also use the Unicode escape sequences as characters in identifiers. 
+                Some examples of legal names are number_hits, temp_99, and _name.</p>
+            </section>
+            <section class="main-section" id="Declaring_Variables">
+              <header>Declaring Variables</header>
+              <p>You can declare a variable in Python by simply assigning it a value. For example:</p>
+              <pre>
+                <code>
+                  x = 42
+                </code>
+              </pre>
+              <p>This syntax can be used to declare both local and global variables.
+                By simply assigning it a value. For example:</p>
+              <pre>
+                <code>
+                  x = 42
+                </code>
+              </pre>  
+              <p>This always declares a global variable unless explicitly defined within a function or class scope. 
+                Python does not have a <span>var</span> keyword like JavaScript, but you should be mindful of variable scope.
+                With the <span>global</span> keyword. For example:</p>
+              <pre>
+                <code>
+                  def my_function():
+                       global x
+                       x = 13
+                </code>
+              </pre>
+              <p>This syntax can be use to declare a global variable from within a function or local scope.</p>
+            </section>
+            <section class="main-section" id="Variable_Scope">
+              <header>Variable Scope</header>
+              <p>When you declare a variable outside of any function, it is called a global variable because it is available to any other code in the current document.
+                 When you declare a variable within a function, it is called a local variable, because it is available only within that function.
+                 Python before version 3.0 did not have block scope (e.g., for variables declared within a loop or conditional); rather, variables are scoped to the function or global scope they reside in.
+                 For example, the following code will print the value of <span>x</span> as a global variable because <span>x</span> is not defined in the local scope of the <span>if</span> statement:</p>
+              <pre>
+                <code>
+                    x = 5
+                    if True:
+                        x = 10
+                    print(x)  # 10
+                </code>
+              </pre>
+              <p>This behavior changes when using a variable before it is defined in a scope, leading to an error:</p>
+              <pre>
+                <code>
+                    if True:
+                        y = 5
+                    print(y)  # NameError: name 'y' is not defined
+                </code>
+              </pre>
+            </section>
+            <section class="main-section" id="Global_variables">
+              <header>Global variables</header>
+              <p>Global variables are accessible throughout your program. In Python, the global namespace is managed by the module scope, so you can set and access global variables using the global keyword within a function.
+                Consequently, you can access global variables declared in one module from another module by importing it. For example, a variable declared in a module can be accessed using <span>module_name.variable_name</span>.</p>
+            </section>
+            <section class="main-section" id="Constants">
+              <header>Constants</header>
+              <p>Python does not have a built-in constant type, but by convention, you can create a read-only variable by using uppercase letters for the identifier. The variable name must start with a letter or underscore and can contain alphanumeric characters or underscores:</p>
+              <pre>
+                <code>
+                  PI = 3.14
+                </code>
+              </pre>
+              <p>A constant cannot change value through assignment or be re-declared while the script is running. It must be initialized to a value.
+                The scope rules for constants are the same as those for variables. If the constant is defined at the module level, it is treated as a global constant.
+                You cannot declare a constant with the same name as a function or variable in the same scope. For example:</p>
+              <pre>
+                <code>
+                  # THIS WILL CAUSE AN ERROR
+                  def PI():
+                      pass
+                  PI = 3.14  # SyntaxError: invalid syntax
+                </code>
+              </pre>
+              <p>However, object attributes are not protected, so the following statement is executed without problems.</p>
+              <pre>
+                <code>
+                  MY_OBJECT = {"key": "value"}
+                  MY_OBJECT["key"] = "other_value"
+                </code>
+              </pre>
+            </section>
+            <section class="main-section" id="Data_Types">
+              <header>Data Types</header>
+              <p>Python has several built-in data types:</p>
+              <p>Six data types that are primitives:</p> 
+                <ul>
+                  <li>Boolean. <span>True</span> and <span>False</span>.</li>
+                  <li><span>None</span>. A special keyword denoting a null value.</li>
+                  <li><span>int</span>. Interger numbers like <span>42</span> or <span>-3</span>.</li>
+                  <li><span>float</span>. Floating-point numbers like <span>3.14159</span>.</li>
+                  <li><span>str</span>. String, like <span>"Howdy"</span>.</li>
+                  <li><span>bytes</span>. Raw byte data, like <span>b"data"</span>.</li>
+                </ul>
+              <p>And more complex types</p>
+                <ul>
+                  <li><span>list</span>, <span>tuple</span>, <span>dict</span>, <span>set</span>, etc</li>
+                </ul>
+              <p>Although these data types cover a wide range of use cases, they are sufficient to perform useful tasks in your applications. Objects and functions are the other fundamental elements in the language.
+                 You can think of objects as named containers for values, and functions as procedures that your application can perform.</p>
+            </section>
+            <section class="main-section" id="if...else Statement">
+              <header>if...else Statement</header>
+              <p>Use the <span>if</span> statement to execute a statement if a logical condition is true. Use the optional <span>else</span> clause to execute a statement if the condition is false. An <span>if</span> statement looks as follows:</p>
+              <pre>
+                <code>
+                  if condition:
+                      statement_1
+                  else:
+                      statement_2
+                </code>
+              </pre>
+              <p><span>condition</span> can be any expression that evaluates to <span>True</span> or <span>False</span>. See Boolean for an explanation of what evaluates to <span>True</span> and <span>False</span>.
+                 If <span>condition</span> evaluates to <span>True</span>, <span>statement_1</span> is executed; otherwise, <span>statement_2</span> is executed. <span>statement_1</span> and <span>statement_2</span> can be any statement, including further nested <span>if</span> statements.
+                You may also compound the statements using <span>elif</span> to have multiple conditions tested in sequence, as follows:</p>
+              <pre>
+                <code>
+                  if condition_1:
+                      statement_1
+                  elif condition_2:
+                      statement_2
+                  elif condition_n
+                      statement_n
+                  else:
+                      statement_last
+                </code>
+              </pre>
+              <p>In the case of multiple conditions, only the first logical condition that evaluates to <span>True</span> will be executed. To execute multiple statements, group them within a block using indentation, especially when nesting statements:</p>
+              <pre>
+                <code>
+                  if condition_1:
+                      statement_1_runs_if_condition_1_is_true()
+                      statement_2_runs_if_condition_1_is_true()
+                  elif condition_2:
+                      statement_3_runs_if_condition_2_is_true()
+                      statement_4_runs_if_condition_2_is_false()
+                  else:
+                      statement_last()
+                </code>
+              </pre>
+              <p>It is advisable to avoid deep nesting in a conditional expression because the indentation can become unwieldy. For example, do not use the following code:</p>    
+              <pre>
+                <code>
+                  if x == y:
+                      # statements here
+                </code>
+              </pre> 
+              <p>If you need to use an equality comparison in a conditional expression, common practice is to put additional parentheses around the comparison. For example:</p>                                                      
+              <pre>
+                <code>
+                  if (x == y):
+                      # statements here
+                </code>
+              </pre>                                                                                                                                                             
+            </section>
+            <section class="main-section" id="while_Statement">
+              <header>while Statement</header>
+              <p>A <span>while</span> statement executes its statements as long as a specified condition evaluates to <span>True</span>. A <span>while</span> statement looks as follows:</p>
+              <pre>
+                <code>
+                  while condition:
+                      statement
+                </code>
+              </pre>
+              <p>If the <span>condition</span> becomes <span>False</span>, the statement within the loop stops executing and control passes to the statement following the loop.
+                The <span>condition</span> test occurs before the statement in the loop is executed. If the <span>condition</span> returns <span>True</span>, the statement is executed and the <span>condition</span> is tested again.
+                If the <span>condition</span> returns <span>False</span>, execution stops and control is passed to the statement following the <span>while</span>.
+                To execute multiple statements, use indentation to group those statements.
+                Example:
+                The following <span>while</span> loop iterates as long as <span>n</span> is less than three:</p>
+                <pre>
+                  <code>
+                    n = 0
+                    n = 0
+                    while n < 3:
+                        n += 1
+                        x += n
+                  </code>
+                </pre>
+                <p>With each iteration, the loop increments <span>x</span> and adds that value to <span>x</span>. Therefore, <span>x</span> and <span>n</span> take on the following values:</p>
+                  <ul>
+                    <li>After the first pass: <span>n = 1</span> and <span>x = 1</span></li>
+                    <li>After the first pass: <span>n = 2</span> and <span>x = 3</span></li>
+                    <li>After the third pass: <span>n = 3</span> and <span>x = 6</span> </li>  
+                  </ul>
+                  <p>After completing the third pass, the condition <span>n < 3</span> is no longer <span>True</span>, so the loop terminates.</p>                  
+            </section>
+        </main>
+    </body>
+</html>
