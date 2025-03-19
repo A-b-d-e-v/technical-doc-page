@@ -16,6 +16,7 @@ body {
   padding: 0 auto;
   font-size: inherit;
   line-height: 1;
+  color: #000000;
 }
 
 .main-section {
@@ -41,11 +42,11 @@ p {
 }
 
 span {
-  color: rgb(0, 17, 255);
+  color: #5505ff;
 }
 
 code {
-  color:rgb(98, 0, 255)
+  color:#0050ff
 }
 
 a {
