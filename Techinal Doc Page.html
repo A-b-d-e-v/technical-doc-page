@@ -249,6 +249,33 @@
                   </ul>
                   <p>After completing the third pass, the condition <span>n < 3</span> is no longer <span>True</span>, so the loop terminates.</p>                  
             </section>
+            <section class="main-section" id="Function_Declarations">
+              <header>Function Declaration</header>
+              <p>A function definition (also called a function declaration, or function statement) consists of the following:</p>
+              <ul>
+                <li>The name of the function.</li>
+                <li>A list of parameters to the function, enclosed in parentheses and separated by commas.</li>
+                <li>The python statements that defines the function, enclosed in a block with indentation.</li>
+              </ul>
+                <p>For example, the following code defines a simple function named <span>square</span>:</p>
+                <pre>
+                  <code>
+                    def square(number):
+                        return number * number
+                  </code>
+                </pre>
+                <p>The function <span>square</span> takes one parameter, called <span>number</span>. The function consists of one statement that says to return the parameter of the function (that is, <span>number</span>) multiplied by itself. The <span>return</span> statement specifies the value returned by the function:</p>
+                <pre>
+                  <code>
+                    return number * number
+                  </code>
+                </pre>
+                <p>Parameters (such as <span>number</span>) are passed to functions by value; the value is passed to the function, but if the function changes the value of the parameter, this change is not reflected globally or in the calling function.</p>
+            </section>
+            <section class="main-section" id="Reference">
+              <header>Reference</header>
+              <p>All the documentation in this page is adapted from the <a href="https://docs.python.org/3.13/" target="_blank" rel="noopener noreferrer">Python official documentation</a>.</p>
+            </section>
         </main>
     </body>
 </html>
