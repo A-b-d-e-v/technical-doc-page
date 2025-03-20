@@ -40,19 +40,19 @@ ul > li > a {
   cursor: pointer;
 }
 
-#navbar > ul > li {
+#navbar > ul > li, header:nth-child(1) {
   list-style: none;
   margin: 1rem;
 }
 
 ul > li > a:hover {
   text-transform: none;
-  color: #5505ff;
+  color: #0000ff;
 }
 
 .main-section {
   margin: 2rem auto;
-  padding: 0 auto;
+  padding: 0;
   letter-spacing: 0.35;
   line-height: 1.5;
 }
@@ -67,7 +67,7 @@ header {
 p {
   font-size: inherit;
   margin: 0.7rem auto;
-  padding: 0 auto;
+  padding: 0;
 
 }
 
@@ -92,4 +92,73 @@ a {
 a:hover {
   text-transform: uppercase;
   color: #000000;
+}
+
+@media (min-width: 480px) {
+  #navbar {
+    height: 100%;
+    width: 25%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    border-right: 3px solid #808080;
+  }
+
+  body {
+    width: 70%;
+    height: 100%;
+    font-family: Arial, serif;
+    margin: 0;
+    padding-left: 0;
+    font-size: inherit;
+    color: rgb(71, 66, 66);
+    position: relative;
+    left: 300;
+  }
+}
+
+@media (min-width:1025px) {
+  #navbar {
+    height: 100%;
+    width: calc(100% - 76%);
+    position: fixed;
+    top: 0;
+    left: 0;
+    border-right: 3px solid #808080;
+  }
+
+  body {
+    width: 70%;
+    height: 100%;
+    font-family: Arial, serif;
+    margin: 0;
+    padding-left: 0;
+    font-size: inherit;
+    color: rgb(71, 66, 66);
+    position: relative;
+    left: 380;
+  }
+}
+
+@media (min-width: 1441px) {
+  #navbar {
+    height: 100%;
+    width: 15%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    border-right: 3px solid #808080;
+  }
+
+  body {
+    width: 80%;
+    height: 100%;
+    font-family: Arial, serif;
+    margin: 0;
+    padding-left: 0;
+    font-size: inherit;
+    color: rgb(71, 66, 66);
+    position: relative;
+    left: 450;
+  }
 }
