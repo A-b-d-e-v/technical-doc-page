@@ -19,6 +19,7 @@ body {
   color: rgb(71, 66, 66);
   position: relative;
   left: 380;
+  overflow-x: hidden;
 }
 
 #navbar {
