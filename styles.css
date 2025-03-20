@@ -18,7 +18,7 @@ body {
   font-size: inherit;
   color: rgb(71, 66, 66);
   position: relative;
-  left: 380;
+  left: 380px;
   overflow-x: hidden;
 }
 
@@ -30,6 +30,7 @@ body {
   left: 0;
   border-right: 3px solid #808080;
   overflow-y: auto;
+  font-size: 1.2rem;
 }
 
 .divider {
@@ -114,7 +115,7 @@ a:hover {
     font-size: inherit;
     color: rgb(71, 66, 66);
     position: relative;
-    left: 300;
+    left: 300px;
   }
 }
 
@@ -137,7 +138,7 @@ a:hover {
     font-size: inherit;
     color: rgb(71, 66, 66);
     position: relative;
-    left: 380;
+    left: 380px;
   }
 }
 
@@ -160,6 +161,6 @@ a:hover {
     font-size: inherit;
     color: rgb(71, 66, 66);
     position: relative;
-    left: 450;
+    left: 450px;
   }
 }
