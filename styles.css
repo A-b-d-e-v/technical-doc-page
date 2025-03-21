@@ -13,12 +13,12 @@ body {
   width: 70%;
   height: 100%;
   font-family: Arial, serif;
-  margin-left: calc(100% - 75%);
+  margin-left: calc(100% - 78%);
   padding-left: 0;
   font-size: 1rem;
   color: rgb(71, 66, 66);
   position: relative;
-  left: 70px;
+  left: 65px;
   overflow-x: hidden;
 }
 
